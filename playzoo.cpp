@@ -55,7 +55,7 @@ int main () {
     if (chose_num == 2) {
         int r = 0; int s = 0; int x = game.r_num_monkey(); int y = game.r_num_sea_otters(); int z = game.r_num_sloths();
        if ( (x + y + z)>0 ) {
-          cout << "An animal will have a baby. hahahahahah!" <<endl;
+          cout <<" "<<endl;  cout << "An animal will have a baby. hahahahahah!" <<endl;
           while(1 == 1) {
           r = 1 + (rand() % 3);
           if (r == 1) { if (x>0) { break; }  }  if (r == 2) { if (y>0) { break; }  }  if (r == 3) { if (z>0) { break; }  }
@@ -70,7 +70,7 @@ int main () {
         int r = 0; int s = 0; int x = game.r_num_monkey(); int y = game.r_num_sea_otters(); int z = game.r_num_sloths();
        int a = game.b_r_num_monkey(); int b = game.b_r_num_sea_otters(); int c = game.b_r_num_sloths();
        if ( (x + y + z + a + b + c)>0 ) {
-          cout << "An animal will fall sick. so sad!!" <<endl;
+          cout<<" "<<endl;    cout << "An animal will fall sick. so sad!!" <<endl;
           while(1 == 1) {
         //  r = 2;
           r = 1 + (rand() % 6);

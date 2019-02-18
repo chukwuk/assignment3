@@ -386,7 +386,7 @@ void data_to_explore2() {
    cout <<"Enter (0) if you don't want to buy an animal"<<endl; cout <<" "<<endl;
    cout <<"Enter (1) if you want buy just one animal"<<endl; cout <<" "<<endl;
    cout <<"Enter (2) if you want to buy two animal"<<endl; cout <<" "<<endl;
-   cout <<"Enter (3) if you want to buy three animal"<<endl; cout <<" "<<endl;
+ 
 }
 
 /******************************************************
@@ -466,7 +466,7 @@ int check_err2() {
        cout << " " <<endl;
        data_to_explore2();
        getline (cin, uzo);
-    }  while  ((uzo != "0") && (uzo != "1") && (uzo != "2") && (uzo != "3"));
+    }  while  ((uzo != "0") && (uzo != "1") && (uzo != "2") );
     num_input = atoi(uzo.c_str());
     return num_input;
 }
