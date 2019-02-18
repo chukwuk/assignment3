@@ -382,7 +382,7 @@ void data_to_explore() {
 
 
 void data_to_explore2() {
-   cout <<" "<<endl; cout<<"Enter between 0-3 to choose if you want to buy an animal or not"<<endl; cout <<" "<<endl;
+   cout <<" "<<endl; cout<<"Enter between 0-2 to choose if you want to buy an animal or not"<<endl; cout <<" "<<endl;
    cout <<"Enter (0) if you don't want to buy an animal"<<endl; cout <<" "<<endl;
    cout <<"Enter (1) if you want buy just one animal"<<endl; cout <<" "<<endl;
    cout <<"Enter (2) if you want to buy two animal"<<endl; cout <<" "<<endl;

@@ -34,10 +34,14 @@ int main () {
     while (0.00<game.r_money_acc()) {    
     int chu = check_err2();
     if (chu == 0) {game.display_zoo();}
-    int x = 0; 
+    int x = 0; int kcc = 100;
     for (int i = 0; i < chu; i++) {
-       int kcc = check_err(); 
+       do {      
+       kcc = check_err();
+       if (kcc==x) { cout <<""<<endl; cout <<"oops!, you can only buy one species of animal in a day"<<endl;   }       
+       } while (x==kcc);
        take_money(kcc, game);
+       x = kcc;
        game.display_zoo(); 
     }
     game.increase_age(); 
@@ -48,10 +52,12 @@ int main () {
     int chose_num = rand() % 4;
 //   chose_num = 1;
      count++;
+//special event for boom in zoo attendance
     if (chose_num == 3) {
     cout<<" "<<endl;  cout <<"There is boom in zoo attendance"<<endl;
     float cost_tot = game.boom_revenue(); game.add_money(cost_tot); game.display_zoo();   
     }
+//special event for an animal to have a baby
     if (chose_num == 2) {
         int r = 0; int s = 0; int x = game.r_num_monkey(); int y = game.r_num_sea_otters(); int z = game.r_num_sloths();
        if ( (x + y + z)>0 ) {
@@ -66,6 +72,7 @@ int main () {
 
        }
     }
+   //special event for an animal to fall sick
     if (chose_num == 1) {
         int r = 0; int s = 0; int x = game.r_num_monkey(); int y = game.r_num_sea_otters(); int z = game.r_num_sloths();
        int a = game.b_r_num_monkey(); int b = game.b_r_num_sea_otters(); int c = game.b_r_num_sloths();
@@ -99,6 +106,8 @@ int main () {
 
        }
     }
-   int numb = check_err4(); if (numb == 0) { break; }  
+//   int numb = check_err4(); if (numb == 0) { break; }  
    }
+   cout <<""<<endl; cout<<"The zoo went bankrupt, so you lose"<<endl; 
+   return 0;
 }
