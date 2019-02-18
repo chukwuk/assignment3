@@ -67,8 +67,8 @@ int main () {
           if (r == 1) { if (x>0) { break; }  }  if (r == 2) { if (y>0) { break; }  }  if (r == 3) { if (z>0) { break; }  }
           } cout <<" "<<endl;
           if (r == 1) { cout <<"A monkey has given birth"<<endl; game.add_baby(r);  } 
-          if (r == 2) {cout <<"A sea_otters has given birth"<<endl; game.add_baby(r);  }
-          if (r == 3) {cout <<"A monkey has given birth"<<endl; game.add_baby(r);  }  game.display_zoo();
+          if (r == 2) {cout <<"A Sea_otters has given birth"<<endl; game.add_baby(r);  }
+          if (r == 3) {cout <<"A Sloths has given birth"<<endl; game.add_baby(r);  }  game.display_zoo();
 
        }
     }
@@ -84,23 +84,23 @@ int main () {
           if (r == 1) { if (x>0) { break; }  }  if (r == 2) { if (y>0) { break; }  }  if (r == 3) { if (z>0) { break; }  }
           if (r == 4) { if (a>0) { break; }  }  if (r == 5) { if (b>0) { break; }  }  if (r == 6) { if (c>0) { break; }  }
           } cout <<" "<<endl;
-          if (r == 1) { cout <<"A Monkey has fallen sick. so sad!!"<<endl; int num = check_err3();
-              if (num == 0) {game.subtract_animal(1); } 
+          if (r == 1) { cout <<"A Monkey has fallen sick. so sad!!"<<endl; Monkey che; float num = che.get_cost(); num=num*0.5;
+              if (num > game.r_money_acc()) {game.subtract_animal(1); } 
                else {Monkey tes; float c_sick = tes.get_cost(); c_sick=c_sick*0.500; game.subtract_money(c_sick);  }  }
-          if (r == 2) {cout <<"A Sea_otter has fallen sick. so sad!!"<<endl; int num = check_err3();
-            if (num == 0) {game.subtract_animal(2); }
+          if (r == 2) {cout <<"A Sea_otter has fallen sick. so sad!!"<<endl; Sea_otters che; float num = che.get_cost(); num=num*0.5;
+            if (num > game.r_money_acc()) {game.subtract_animal(2); }
                else {Sea_otters tes; float c_sick = tes.get_cost(); c_sick=c_sick*0.500; game.subtract_money(c_sick);  }  }
-          if (r == 3) {cout <<"A Sloth has fallen sick. so sad!!"<<endl; int num = check_err3(); 
-             if (num == 0) {game.subtract_animal(3); }
+          if (r == 3) {cout <<"A Sloth has fallen sick. so sad!!"<<endl; Sloths che; float num = che.get_cost(); num=num*0.5;
+             if (num > game.r_money_acc()) {game.subtract_animal(3); }
                else {Sloths tes; float c_sick = tes.get_cost(); c_sick=c_sick*0.500; game.subtract_money(c_sick);  }  }
-          if (r == 4) {cout <<"A baby Monkey has fallen sick. so sad!!"<<endl; int num = check_err3();
-             if (num == 0) {game.subtract_baby(1); }
+          if (r == 4) {cout <<"A baby Monkey has fallen sick. so sad!!"<<endl; Monkey che; float num = che.get_cost();
+             if (num > game.r_money_acc()) {game.subtract_baby(1); }
                else {Monkey tes; float c_sick = tes.get_cost();  game.subtract_money(c_sick);  }  }
-          if (r == 5) {cout <<"A baby Sea_otter has fallen sick. so sad!!"<<endl; int num = check_err3();
-            if (num == 0) {game.subtract_baby(2); }
+          if (r == 5) {cout <<"A baby Sea_otter has fallen sick. so sad!!"<<endl; Sea_otters che; float num = che.get_cost();
+            if (num > game.r_money_acc()) {game.subtract_baby(2); }
                else {Sea_otters tes; float c_sick = tes.get_cost();  game.subtract_money(c_sick);  }  }
-          if (r == 6) {cout <<"A Sloth has fallen sick. so sad!!"<<endl; int num = check_err3();
-             if (num == 0) {game.subtract_baby(3); }
+          if (r == 6) {cout <<"A Sloth has fallen sick. so sad!!"<<endl; Sloths che; float num = che.get_cost(); 
+             if (num > game.r_money_acc()) {game.subtract_baby(3); }
                else {Sloths tes; float c_sick = tes.get_cost(); game.subtract_money(c_sick);  }  }
            game.display_zoo();
 
