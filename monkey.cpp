@@ -27,12 +27,31 @@
 
 using namespace std;
 
+/******************************************************
+************************************* Function:Monkey()
+*********************************** Description:initialize an adult monkey
+*********************************** Parameters: none
+************************************ Pre-Conditions: none
+*********************************** Post-Conditions : initialize an adult monkey
+**************************************************************************************/
+
+
 Monkey::Monkey() {
         this->cost_animal = 15000.0;
         this->babies = 1;
         this->food_cost = 200.0;
         this->revenue = 1500; 
 }
+
+/******************************************************
+************************************** Function:Monkey
+************************************ Description:initialize a monkey with a certain age
+************************************ Parameters: integers
+************************************* Pre-Conditions: pass an integer value
+************************************ Post-Conditions:initialize the monkey with a certain age 
+***************************************************************************************/
+
+
 
 Monkey::Monkey(int age_animal)  {
         this->age_animal = age_animal;
