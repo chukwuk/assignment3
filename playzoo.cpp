@@ -29,8 +29,9 @@
 using namespace std;
 
 int main () { 
+    cout <<" "<<endl;  cout<<"Welcome to the Zoo Tycoon game!!! it gonna be fun, bruhahahah!!!"<<endl;
     srand(time(0));
-    Zoo game; int count = 0;
+    Zoo game; int count = 0; int number;
     while (0.00<game.r_money_acc()) {    
     int chu = check_err2();
     if (chu == 0) {game.display_zoo();}
@@ -66,9 +67,9 @@ int main () {
           r = 1 + (rand() % 3);
           if (r == 1) { if (x>0) { break; }  }  if (r == 2) { if (y>0) { break; }  }  if (r == 3) { if (z>0) { break; }  }
           } cout <<" "<<endl;
-          if (r == 1) { cout <<"A monkey has given birth"<<endl; game.add_baby(r);  } 
-          if (r == 2) {cout <<"A Sea_otters has given birth"<<endl; game.add_baby(r);  }
-          if (r == 3) {cout <<"A Sloths has given birth"<<endl; game.add_baby(r);  }  game.display_zoo();
+          if (r == 1) { cout <<"A monkey have given birth"<<endl; game.add_baby(r);  } 
+          if (r == 2) {cout <<"A Sea_otters have given birth"<<endl; game.add_baby(r);  }
+          if (r == 3) {cout <<"A Sloths have given birth"<<endl; game.add_baby(r);  }  game.display_zoo();
 
        }
     }
@@ -84,30 +85,33 @@ int main () {
           if (r == 1) { if (x>0) { break; }  }  if (r == 2) { if (y>0) { break; }  }  if (r == 3) { if (z>0) { break; }  }
           if (r == 4) { if (a>0) { break; }  }  if (r == 5) { if (b>0) { break; }  }  if (r == 6) { if (c>0) { break; }  }
           } cout <<" "<<endl;
-          if (r == 1) { cout <<"A Monkey has fallen sick. so sad!!"<<endl; Monkey che; float num = che.get_cost(); num=num*0.5;
+          if (r == 1) { cout <<"A Monkey have fallen sick. so sad!!"<<endl; Monkey che; float num = che.get_cost(); num=num*0.5;
               if (num > game.r_money_acc()) {game.subtract_animal(1); } 
                else {Monkey tes; float c_sick = tes.get_cost(); c_sick=c_sick*0.500; game.subtract_money(c_sick);  }  }
-          if (r == 2) {cout <<"A Sea_otter has fallen sick. so sad!!"<<endl; Sea_otters che; float num = che.get_cost(); num=num*0.5;
+          if (r == 2) {cout <<"A Sea_otter have fallen sick. so sad!!"<<endl; Sea_otters che; float num = che.get_cost(); num=num*0.5;
             if (num > game.r_money_acc()) {game.subtract_animal(2); }
                else {Sea_otters tes; float c_sick = tes.get_cost(); c_sick=c_sick*0.500; game.subtract_money(c_sick);  }  }
-          if (r == 3) {cout <<"A Sloth has fallen sick. so sad!!"<<endl; Sloths che; float num = che.get_cost(); num=num*0.5;
+          if (r == 3) {cout <<"A Sloth have fallen sick. so sad!!"<<endl; Sloths che; float num = che.get_cost(); num=num*0.5;
              if (num > game.r_money_acc()) {game.subtract_animal(3); }
                else {Sloths tes; float c_sick = tes.get_cost(); c_sick=c_sick*0.500; game.subtract_money(c_sick);  }  }
-          if (r == 4) {cout <<"A baby Monkey has fallen sick. so sad!!"<<endl; Monkey che; float num = che.get_cost();
+          if (r == 4) {cout <<"A baby Monkey have fallen sick. so sad!!"<<endl; Monkey che; float num = che.get_cost();
              if (num > game.r_money_acc()) {game.subtract_baby(1); }
                else {Monkey tes; float c_sick = tes.get_cost();  game.subtract_money(c_sick);  }  }
-          if (r == 5) {cout <<"A baby Sea_otter has fallen sick. so sad!!"<<endl; Sea_otters che; float num = che.get_cost();
+          if (r == 5) {cout <<"A baby Sea_otter have fallen sick. so sad!!"<<endl; Sea_otters che; float num = che.get_cost();
             if (num > game.r_money_acc()) {game.subtract_baby(2); }
                else {Sea_otters tes; float c_sick = tes.get_cost();  game.subtract_money(c_sick);  }  }
-          if (r == 6) {cout <<"A Sloth has fallen sick. so sad!!"<<endl; Sloths che; float num = che.get_cost(); 
+          if (r == 6) {cout <<"A Sloth have fallen sick. so sad!!"<<endl; Sloths che; float num = che.get_cost(); 
              if (num > game.r_money_acc()) {game.subtract_baby(3); }
                else {Sloths tes; float c_sick = tes.get_cost(); game.subtract_money(c_sick);  }  }
            game.display_zoo();
 
        }
     }
-//   int numb = check_err4(); if (numb == 0) { break; }  
+   int numb = check_err4(); if (numb == 0) { break; }   number = numb;
    }
-   cout <<""<<endl; cout<<"The zoo went bankrupt, so you lose"<<endl; 
+ 
+   if (number==1) {
+   cout <<""<<endl; cout<<"The zoo went bankrupt, so you lose the game!!!"<<endl; }
+   cout<<" "<<endl; cout <<"Thank you for playing the game!!!"<<endl; cout <<" "<<endl;
    return 0;
 }

@@ -30,6 +30,14 @@
 
 
 using namespace std;
+/******************************************************
+************************************** Function:Zoo
+************************************* Description:initialize all the animals and number of animals in the zoo
+************************************ Parameters: none
+************************************* Pre-Conditions: none
+************************************ Post-Conditions:initialize all the animals and number of animals in the zoo
+***************************************************************************************/
+
 
 Zoo::Zoo() : num_monkey(0), num_sea_otters(0), num_sloths(0), money_account(100000.00), num_bab_monkey(0), num_bab_sea_otters(0), num_bab_sloths(0)  {
         this->monkey = new Monkey[100];
@@ -333,6 +341,14 @@ float Zoo::total_cost() {
      return cost_total;
 
 }
+/******************************************************
+*************************************** Function:increase_age
+*********************************** Description:increase the age of each animal in the zoo by a day
+************************************ Parameters: none
+************************************* Pre-Conditions: none
+************************************ Post-Conditions:increase the age of each animal in the zoo by a day
+***************************************************************************************/
+
 
 void Zoo::increase_age() {
      for(int i = 0; i < this->num_monkey; i++) {
@@ -537,11 +553,11 @@ float Zoo::boom_revenue() {
      srand(time(0));
      float cost_total = 0.0;
      for(int i = 0; i < this->num_monkey; i++) {
-        float c = 250.0 + (rand() % 250);
+        float c = 250.0 + (rand() % 251);
         cost_total+=c;
      }
     for(int i = 0; i < this->num_bab_monkey; i++) {
-        float c = 250.0 + (rand() % 250);
+        float c = 250.0 + (rand() % 251);
         cost_total+=c;
      }
      return cost_total;
@@ -612,6 +628,14 @@ float Zoo::total_revenue() {
      return cost_total;
 
 }
+/******************************************************
+**************************************** Function:take_money
+*********************************** Description:add animal to the zoo and subttract the cost of the animal from the bank account
+************************************** Parameters: Zoo class and integer
+*************************************** Pre-Conditions: you must pass a Zoo class and an integer
+************************************** Post-Conditions:adds an animal and subtract the cost from the bank
+*****************************************************************************************/
+
 
 void take_money(int num, Zoo& game) {
      if (num==1) {
