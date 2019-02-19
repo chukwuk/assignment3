@@ -31,7 +31,7 @@ using namespace std;
 int main () { 
     cout <<" "<<endl;  cout<<"Welcome to the Zoo Tycoon game!!! it gonna be fun, bruhahahah!!!"<<endl;
     srand(time(0));
-    Zoo game; int count = 0; int number;
+    Zoo game; int count = 0; int bum; int bo;
     while (0.00<game.r_money_acc()) {    
     int chu = check_err2();
     if (chu == 0) {game.display_zoo();}
@@ -53,6 +53,9 @@ int main () {
     int chose_num = rand() % 4;
 //   chose_num = 1;
      count++;
+  
+//To indicate no special event occured
+    if (chose_num == 0) { cout <<""<<endl; cout<<"No special event occured on this day"<<endl; } 
 //special event for boom in zoo attendance
     if (chose_num == 3) {
     cout<<" "<<endl;  cout <<"There is boom in zoo attendance"<<endl;
@@ -107,10 +110,11 @@ int main () {
 
        }
     }
-   int numb = check_err4(); if (numb == 0) { break; }   number = numb;
+   bo = check_err4(); if (bo == 0) { break; } 
+   
    }
- 
-   if (number==1) {
+   bum = bo;
+   if (bum==1) {
    cout <<""<<endl; cout<<"The zoo went bankrupt, so you lose the game!!!"<<endl; }
    cout<<" "<<endl; cout <<"Thank you for playing the game!!!"<<endl; cout <<" "<<endl;
    return 0;
